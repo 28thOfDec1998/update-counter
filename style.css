@@ -47,9 +47,10 @@
   }
 
   :root{
-    --bg_color:rgb(250, 246, 240);
+    --bg_color:rgb(221, 242, 253);
     --container_bg: rgb(244, 223, 200);
     --btn_bg: rgb(244, 234, 224);
+    --text_colour: rgb(22, 72, 99);
   }
 
   body{
@@ -60,6 +61,50 @@
     background-color: var(--bg_color);
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* counter Css */
 
   .container{
     padding: 4rem;
