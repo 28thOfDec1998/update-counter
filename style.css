@@ -39,6 +39,9 @@
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
+  a{
+    text-decoration: none;
+  }
   /*
     8. Create a root stacking context
   */
@@ -60,6 +63,11 @@
     min-height: 100vh;
     background-color: var(--bg_color);
   }
+
+  a {color:black;}         /* Unvisited link  */
+  a:visited {color:black;} /* Visited link    */
+  a:hover {color:#FF00FF;}   /* Mouse over link */
+  /* a:active {color:#0000FF;}  Selected link   */
   
 /* index CSS */
 
@@ -74,7 +82,10 @@
   min-width: 200px;
   text-align: center;
   padding: 6rem 0;
+}
 
+.wrapper .cards a i{
+  padding-bottom: 1.5rem;
 }
 
 
