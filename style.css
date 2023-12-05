@@ -124,6 +124,39 @@
   position:absolute;
 }
 
+/* clock Css */
+
+.box{
+  width:730px;
+  height:300px;
+  padding: 4rem;
+  border: black solid 0.2rem;
+  border-radius: 2rem;
+  background: var(--container_bg);
+  display: flex;
+  justify-content: center;
+}
+
+.box .timebox{
+  padding: 1rem;
+  width: 700px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-radius: 30px;
+  background:rgb(223, 204, 251);
+  user-select: none;
+}
+
+.box .timebox .time {
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size: 6rem;
+}
+
 
 
 
@@ -135,7 +168,6 @@
     border: black solid 0.2rem;
     border-radius: 2rem;
     background: var(--container_bg);
-    
   }
 
   .container h1 {
