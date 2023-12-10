@@ -1,134 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  a{
-    text-decoration: none;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+a {
+  text-decoration: none;
+}
+/*
     8. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
+#root,
+#__next {
+  isolation: isolate;
+}
 
-  :root{
-    --bg_color:rgb(190, 173, 250);
-    --container_bg: rgb(208, 191, 255);
-    --btn_bg: rgb(255, 248, 201);
-  }
+:root {
+  --bg_color: rgb(190, 173, 250);
+  --container_bg: rgb(208, 191, 255);
+  --btn_bg: rgb(255, 248, 201);
+}
 
-  body{
-    font-family: 'Noto Sans', sans-serif;
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
-    background-color: var(--bg_color);
-  }
+body {
+  font-family: "Noto Sans", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--bg_color);
+}
 
-  a {color:black;}         /* Unvisited link  */
-  a:visited {color:black;} /* Visited link    */
-  /* a:hover {color:#FF00FF;}   Mouse over link */
-  /* a:active {color:#0000FF;}  Selected link   */
-  
+a {
+  color: black;
+} /* Unvisited link  */
+a:visited {
+  color: black;
+} /* Visited link    */
+/* a:hover {color:#FF00FF;}   Mouse over link */
+/* a:active {color:#0000FF;}  Selected link   */
+
 /* index CSS */
 
-.wrapper{
-  position:relative;
-  display:flex;
+.wrapper {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
-  z-index:2;
-  height:100vh;
+  width: 100%;
+  z-index: 2;
+  height: 100vh;
 }
 
 .wrapper .cards {
   background-color: var(--container_bg);
-  width:280px;
-  height:300px;
-  position:relative;
-  margin:20px;
-  border-radius:10px;
+  width: 280px;
+  height: 300px;
+  position: relative;
+  margin: 20px;
+  border-radius: 10px;
   border: solid black 0.2rem;
-  overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  transition:0.8s all ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.8s all ease;
 }
 
-.wrapper .cards:hover{
+.wrapper .cards:hover {
   background-color: rgb(223, 204, 251);
 }
 
-.wrapper .cards i{
-  transition:0.8s all ease;
-  color:black;
-  transform:translateY(200px);
-  opacity:0;
+.wrapper .cards i {
+  transition: 0.8s all ease;
+  color: black;
+  transform: translateY(200px);
+  opacity: 0;
 }
 
-.wrapper .cards:hover i{
-  transform:translateY(0px);
-  opacity:1;
+.wrapper .cards:hover i {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
-.wrapper .cards .content{
-  padding:20px;
-  position:absolute;
-  transition:0.8s all ease;
+.wrapper .cards .content {
+  padding: 20px;
+  position: absolute;
+  transition: 0.8s all ease;
 }
 
-.wrapper .cards:hover .content{
-  opacity:0;
-  z-index:-1;
-  position:absolute;
+.wrapper .cards:hover .content {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
 }
 
 /* clock Css */
 
-.box{
-  width:730px;
-  height:300px;
+.box {
+  width: 730px;
+  height: 300px;
   padding: 4rem;
   border: black solid 0.2rem;
   border-radius: 2rem;
@@ -137,7 +157,7 @@
   justify-content: center;
 }
 
-.box .timebox{
+.box .timebox {
   padding: 1rem;
   width: 700px;
   height: 150px;
@@ -146,57 +166,55 @@
   justify-content: center;
   flex-wrap: nowrap;
   border-radius: 30px;
-  background:rgb(223, 204, 251);
+  background: rgb(223, 204, 251);
   user-select: none;
 }
 
 .box .timebox .time {
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 6rem;
 }
 
-
-
-
 /* counter Css */
-  .container{
-    width:450px;
-    height:300px;
-    padding: 4rem;
-    border: black solid 0.2rem;
-    border-radius: 2rem;
-    background: var(--container_bg);
-  }
+.container {
+  width: 450px;
+  height: 300px;
+  padding: 4rem;
+  border: black solid 0.2rem;
+  border-radius: 2rem;
+  background: var(--container_bg);
+}
 
-  .container h1 {
-    text-align: center;
-    padding-bottom: 1rem;
-  }
+.container h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
 
-  .container .value {
-    text-align: center;
-    padding-bottom: 1rem;
-    font-size: 30px;
-  }
+.container .value {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 30px;
+}
 
-  .container .btn_container{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
+.container .btn_container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
 
 .button-37 {
   background-color: var(--btn_bg);
   border: 1px solid black;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
   box-sizing: border-box;
   color: black;
   cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont,
+    sans-serif;
   font-size: 16px;
   font-weight: 400;
   outline: none;
@@ -211,7 +229,7 @@
 }
 
 .button-37:hover {
-  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
   transform: translateY(-2px);
 }
 
@@ -221,10 +239,8 @@
   }
 }
 
-
-
-@media only screen and (max-width:900px) {
-  .wrapper{
-    display:block;
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    display: block;
   }
 }
