@@ -70,6 +70,6 @@ function currentTime() {
 
 currentTime();
 
-// Stop watch js
+// Stop watch js.
 
 
