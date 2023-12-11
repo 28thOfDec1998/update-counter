@@ -1,12 +1,63 @@
+// stopWatch js
+let seconds = 0;
+let milSecond = 0;
+let interval;
+
+let appendSeconds = document.getElementById("seconds");
+let appendMilseconds = document.getElementById("milseconds");
+
+let = startBtn = document.getElementById("btn-start");
+let = resetBtn = document.getElementById("btn-reset");
+let = stopBtn = document.getElementById("btn-stop");
+
+function start() {
+  interval = setInterval(startTimer, 10);
+}
+function reset() {
+  seconds = "00";
+  milSecond = "00";
+  appendSeconds.innerHTML = seconds;
+  appendMilseconds.innerHTML = milSecond;
+}
+
+function stop() {
+  clearInterval(interval);
+}
+
+function startTimer() {
+  milSecond++;
+
+  if (milSecond <= 9) {
+    appendMilseconds.innerHTML = "0" + milSecond;
+  }
+
+  if (milSecond > 9) {
+    appendMilseconds.innerHTML = milSecond;
+  }
+
+  if (milSecond > 99) {
+    console.log("seconds");
+    seconds++;
+    appendSeconds.innerHTML = "0" + seconds;
+    milSecond = 0;
+    appendMilseconds.innerHTML = "0" + 0;
+  }
+
+  if (seconds > 9) {
+    appendSeconds.innerHTML = seconds;
+  }
+}
+
+// counter js
 let count = 0;
 
 // get the #value is id  & .btn is class in html
 const value = document.querySelector("#value");
-const btns = document.querySelectorAll(".btn");
+const countButtons = document.querySelectorAll(".btn");
 
 // The forEach() method calls a function for each element in an array. The forEach() method is not executed for empty elements.
 // Also use call funcations
-btns.forEach(function (btn) {
+countButtons.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
     const styles = event.currentTarget.classList;
     if (styles.contains("neg")) {
@@ -69,7 +120,3 @@ function currentTime() {
 }
 
 currentTime();
-
-// Stop watch js.
-
-
