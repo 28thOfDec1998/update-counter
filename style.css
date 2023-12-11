@@ -154,7 +154,7 @@ a:visited {
 /* stop watch css */
 
 .stopwatch {
-  width: 730px;
+  width: 700px;
   height: 300px;
   padding: 4rem;
   border: black solid 0.2rem;
@@ -169,7 +169,7 @@ a:visited {
 
 .stopwatch .stopbox {
   padding: 1rem;
-  width: 700px;
+  width: 600px;
   height: 150px;
   display: flex;
   align-items: center;
