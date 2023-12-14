@@ -7,8 +7,72 @@
     <title>Document</title>
   </head>
   <body>
-    hello
 
-    <!-- <script src="calendar.js"></script> -->
+    <div class="calendar">
+
+      <div class="calendar-box">
+        <div><h2>TODAY</h2></div>
+        <div><h3 id="day"></h3></div>
+      </div>
+
+      <div class="calendar-box">
+        <div><h2>DATE</h2></div>
+        <div><h3 id="date">Monday</h3></div>
+      </div>
+
+      <div class="calendar-box">
+        <div><h2>MONTH</h2></div>
+        <div><h3 id="month">Monday</h3></div>
+      </div>
+
+      <div class="calendar-box">
+        <div><h2>YEAR</h2></div>
+        <div><h3 id="year">Monday</h3></div>
+      </div>
+
+    </div>
+
+    <script>
+      let date = new Date();
+      let day = date.getDay();
+      let month = date.getMonth();
+      let year = date.getFullYear();
+
+      let weekDay = date.getDay();
+      let weekLabel = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      let monthLabels = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      function makeCalendar() {
+        month = monthLabels[month];
+        weekDay = weekLabel[weekDay];
+        document.getElementById("day").innerHTML = weekDay;
+        document.getElementById("date").innerHTML = "Date is: " + day;
+        document.getElementById("month").innerHTML = month;
+        document.getElementById("year").innerHTML = "Year is: " + year;
+      }
+      makeCalendar();
+    </script>
   </body>
 </html>
